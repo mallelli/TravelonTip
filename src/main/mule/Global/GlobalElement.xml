@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:db="http://www.mulesoft.org/schema/mule/db"
+	xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/db http://www.mulesoft.org/schema/mule/db/current/mule-db.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="88fd2e49-7619-4533-828e-50d5e4009a55" >
+		<http:listener-connection host="${http.listner.host}" port="${http.listner.port}" />
+	</http:listener-config>
+	<configuration-properties doc:name="Configuration properties" doc:id="1876f2e6-1798-4a3d-9c96-c1526d95c08b" file="config\local.yaml" />
+	<db:config name="Database_Config" doc:name="Database Config" doc:id="dc4522c3-36ae-42cf-8181-a032e17a0bba" >
+		<db:oracle-connection host="${db.oracle.host}" port="${db.oracle.port}" user="${db.oracle.username}" password="${db.oracle.password}" serviceName="${db.oracle.service}" />
+	</db:config>
+	
+</mule>

@@ -1,0 +1,14 @@
+http:
+ listner:
+  host: "localhost"
+  port: "9081"
+  path: "/travelontipCall/{seviceType}"
+ 
+db:
+ oracle:
+  host: "localhost"
+  port: "1521"
+  username: "SYSTEM"
+  password: "1234"
+  instance: ""
+  service: "xe"
